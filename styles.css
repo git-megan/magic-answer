@@ -1,0 +1,76 @@
+body {
+  font-family: "Permanent Marker", cursive; /* from Google Fonts */
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  width: 70%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#ball {
+  background-color: black;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  /* the ball is the flex container that uses a column structure, 
+  centering the text output div vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#screen {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background-color: #2267f2;
+  /* the screen is also a flex container that uses a column structure,
+  centering the answer text vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#answer-output {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-variant: small-caps;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+#shake-button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin-top: 40px;
+  background: none;
+  border: 2px solid;
+  padding: 0.5em 1em;
+  transition: all 0.25s;
+}
+
+#shake-button:hover {
+  cursor: pointer;
+  border-color: #2267f2;
+  color: #2267f2;
+  box-shadow: 0 0.5em 0.5em -0.4em #2267f2;
+  transform: translateY(-0.25em);
+}
+
+footer {
+  text-align: center;
+  margin: 10px auto;
+}
