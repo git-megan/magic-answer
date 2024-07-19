@@ -23,6 +23,9 @@ let answerStrings = {
   known: "It is known",
 };
 
+// access to the magic 8 ball
+let ball = document.getElementById("ball");
+
 // access to button and output area
 let shakeButton = document.getElementById("shake-button");
 let answerOutput = document.getElementById("answer-output");
@@ -40,7 +43,19 @@ function getAnswer() {
 
 // shake magic 8 ball
 function shakeBall() {
-  answerOutput.textContent = getAnswer();
+  // clear answer text
+  answerOutput.textContent = "";
+
+  // add the shake animation
+  ball.classList.add("shake");
+
+  // remove shake animation after 1s of shaking
+  setTimeout(function () {
+    // stop shake animation
+    ball.classList.remove("shake");
+    // update to show new answer
+    answerOutput.textContent = getAnswer();
+  }, 1000);
 }
 
 // listen for a button click to shake the Magic 8 Ball
